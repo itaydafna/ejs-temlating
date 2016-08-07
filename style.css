@@ -1,0 +1,16 @@
+.beatles-table,
+.header {
+    margin: 30px auto;
+    border: 1px solid black;
+}
+
+.header-row {
+    font-size: 2rem;
+}
+
+td {
+    text-align: center;
+    border: 1px solid black;
+    font-size: 1.3rem;
+}
+
