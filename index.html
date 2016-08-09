@@ -9,8 +9,30 @@
 <body>
 <div id="container"></div>
 
+
+
 <script  src="ejs_0.9_alpha_1_production.js"></script>
-<script src="beatles.ejs"></script>
+<!--<script src="beatles.ejs"></script>-->
 <script  src = "script.js"></script>
+<script id="template" type="text/x-ejs-template">
+  <table class="beatles-table">
+          <thead>
+          <tr class="header-row" colspan="4">
+          <th colspan="4"><%= title %></th>
+          </tr>
+          </thead>
+          <tr>
+          <% for(var i = 0; i < members.length; i++) { %>
+  <td> <%= members[i][0] %></td>
+            <% } %>
+  </tr>
+  <tr>
+  <% for(var i = 0; i < members.length; i++) { %>
+  <td><%= img_tag(members[i][1]) %></td>
+            <% } %>
+  </tr>
+
+  </table>
+</script>
 </body>
 </html>

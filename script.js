@@ -26,7 +26,9 @@ function makeRequest() {
 
 makeRequest().then(function(data){
     console.log(data);
-    var html = new EJS({url: 'beatles.ejs'}).render(data),
+    var template = document.querySelector("#template").innerHTML;
+    var html = new EJS({text: template}).render(data),
+    // var html = new EJS({url: 'beatles.ejs'}).render(data),
         body = document.querySelector("body");
         body.innerHTML = html;
 
